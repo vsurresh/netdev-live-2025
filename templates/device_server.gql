@@ -1,0 +1,27 @@
+query($device_name: String!) {
+  InfraDevice(name__value: $device_name) {
+    edges {
+      node {
+        name {
+          value
+        }
+        location {
+          node {
+            name {
+              value
+            }
+            servers {
+              edges {
+                node {
+                  name {
+                    value
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

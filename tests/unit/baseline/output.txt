@@ -1,0 +1,5 @@
+! Specify NTP servers
+ntp server 01.ntp.atl.acme.com
+ntp server 02.ntp.atl.acme.com
+
+ntp enable

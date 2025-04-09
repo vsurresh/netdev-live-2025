@@ -1,0 +1,40 @@
+{
+    "data": {
+      "InfraDevice": {
+        "edges": [
+          {
+            "node": {
+              "name": {
+                "value": "atl-core-2"
+              },
+              "location": {
+                "node": {
+                  "name": {
+                    "value": "Atlanta"
+                  },
+                  "servers": {
+                    "edges": [
+                      {
+                        "node": {
+                          "name": {
+                            "value": "01.ntp.atl.acme.com"
+                          }
+                        }
+                      },
+                      {
+                        "node": {
+                          "name": {
+                            "value": "02.ntp.atl.acme.com"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

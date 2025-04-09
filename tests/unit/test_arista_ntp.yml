@@ -1,0 +1,16 @@
+---
+version: "1.0"
+infrahub_tests:
+  - resource: Jinja2Transform
+    resource_name: "arista_ntp"
+    tests:
+      - name: "baseline"
+        expect: PASS
+        spec:
+          kind: "jinja2-transform-unit-render"
+          directory: baseline
+      - name: "no_server"
+        expect: PASS
+        spec:
+          kind: "jinja2-transform-unit-render"
+          directory: no_server

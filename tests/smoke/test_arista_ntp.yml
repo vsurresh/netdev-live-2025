@@ -1,0 +1,18 @@
+---
+version: "1.0"
+infrahub_tests:
+  - resource: GraphQLQuery
+    resource_name: device_server
+    tests:
+      - name: syntax_check_qgl
+        spec:
+          path: templates/device_server.gql
+          kind: graphql-query-smoke
+
+  - resource: Jinja2Transform
+    resource_name: arista_ntp
+    tests:
+      - name: syntax_check_jinja
+        spec:
+          path: templates/arista_ntp.tpl.j2
+          kind: jinja2-transform-smoke

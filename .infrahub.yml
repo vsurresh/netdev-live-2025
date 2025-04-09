@@ -1,0 +1,19 @@
+---
+jinja2_transforms:
+  - name: "arista_ntp"
+    description: "Template to generate ntp configs for Arista devices"
+    query: "device_server_info"
+    template_path: "templates/arista_ntp.tpl.j2"
+
+queries:
+  - name: device_server_info
+    file_path: "templates/device_server.gql"
+
+artifact_definitions:
+  - name: "NTP Servers for Arista devices"
+    artifact_name: "ntp-servers"
+    parameters:
+      device_name: "name__value"
+    content_type: "text/plain"
+    targets: "arista_devices"
+    transformation: "arista_ntp"

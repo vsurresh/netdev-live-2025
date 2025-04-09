@@ -1,0 +1,31 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: LocationCountry
+  data:
+    - name: "France"
+      shortname: "FR"
+      children:
+        kind: LocationSite
+        data:
+          - name: "Paris"
+            shortname: "cdg"
+    - name: "United Kingdom"
+      shortname: "UK"
+      children:
+        kind: LocationSite
+        data:
+          - name: "London"
+            shortname: "lon"
+    - name: "United States"
+      shortname: "US"
+      children:
+        kind: LocationSite
+        data:
+          - name: "Atlanta"
+            shortname: "atl"
+          - name: "Houston"
+            shortname: "iah"
+          - name: "Chicago"
+            shortname: "chi"

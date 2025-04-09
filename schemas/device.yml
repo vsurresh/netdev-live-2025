@@ -1,0 +1,42 @@
+---
+# yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
+version: "1.0"
+nodes:
+  - name: Device
+    namespace: Infra
+    label: Device
+    display_labels:
+      - name__value
+    icon: gis:search-country
+    attributes:
+      - name: name
+        kind: Text
+        unique: true
+      - name: description
+        kind: Text
+        optional: true
+      - name: role
+        kind: Dropdown
+        optional: true
+        default_value: "core"
+        choices:
+          - name: core
+          - name: access
+          - name: aggregation
+      - name: status
+        kind: Dropdown
+        optional: true
+        default_value: "active"
+        choices:
+          - name: active
+          - name: maintenance
+          - name: provisioning
+    relationships:
+      - name: location
+        peer: LocationSite
+        optional: false
+        cardinality: one
+      - name: primary_ip
+        peer: IpamIPAddress
+        optional: true
+        cardinality: one

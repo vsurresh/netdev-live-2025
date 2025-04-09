@@ -1,0 +1,3 @@
+! Specify NTP servers
+
+ntp disable

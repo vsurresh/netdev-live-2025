@@ -1,0 +1,36 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: NetworkNTPServer
+  data:
+    - name: "01.ntp.chi.acme.com"
+      location: "chi"
+      status: "active"
+      ip_addresses:
+        data:
+          - address: "172.16.120.1"
+    - name: "02.ntp.chi.acme.com"
+      location: "chi"
+      status: "provisioning"
+      ip_addresses:
+        data:
+          - address: "172.16.120.2"
+    - name: "01.ntp.atl.acme.com"
+      location: "atl"
+      status: "active"
+      ip_addresses:
+        data:
+          - address: "172.16.130.1"
+    - name: "02.ntp.atl.acme.com"
+      location: "atl"
+      status: "provisioning"
+      ip_addresses:
+        data:
+          - address: "172.16.130.2"
+    - name: "01.ntp.us.acme.com"
+      location: "US"
+      status: "active"
+      ip_addresses:
+        data:
+          - address: "172.16.30.1"

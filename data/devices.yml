@@ -1,0 +1,57 @@
+---
+apiVersion: infrahub.app/v1
+kind: Object
+spec:
+  kind: InfraDevice
+  data:
+    - name: "atl-core-1"
+      location: "atl"
+      role: "core"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.1.2/24"
+      member_of_groups:
+        - "arista_devices"
+
+    - name: "atl-core-2"
+      location: "atl"
+      role: "core"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.1.3/24"
+      member_of_groups:
+        - "arista_devices"
+
+    - name: "chi-access-1"
+      location: "chi"
+      role: "access"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.100.21/24"
+
+    - name: "chi-access-2"
+      location: "chi"
+      role: "access"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.100.22/24"
+
+    - name: "chi-core-1"
+      location: "chi"
+      role: "core"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.100.2/24"
+
+    - name: "chi-core-2"
+      location: "chi"
+      role: "core"
+      status: "active"
+      primary_ip:
+        data:
+            address: "172.16.100.3/24"
