@@ -1,10 +1,11 @@
 ! Specify NTP servers
+! Test
 {% for server in data.InfraDevice.edges[0].node.location.node.servers.edges %}
 ntp server {{ server.node.name.value }}
 {% endfor %}
 
 {% if data.InfraDevice.edges[0].node.location.node.servers.edges|length > 0 %}
 ntp enable
-{% else }
+{% else %}
 ntp disable
 {% endif %}
