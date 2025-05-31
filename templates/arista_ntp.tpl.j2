@@ -5,6 +5,6 @@ ntp server {{ server.node.name.value }}
 
 {% if data.InfraDevice.edges[0].node.location.node.servers.edges|length > 0 %}
 ntp enable
-{% else %}
+{% else }
 ntp disable
 {% endif %}
